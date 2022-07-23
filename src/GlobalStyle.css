@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper {
+    width: 100%;
+    height: 81vh;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 100px;
+    gap: 50px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background-color: #636363;
+    opacity: 1;
+    padding-right: 5px;
+}
+.swiper-pagination-bullet-active {
+    background-color: red;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* height: calc((100% - 30px) / 2) !important; */
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.myMovieSwiper > .swiper-wrapper {
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+}
+.myMovieSwiper > .swiper-wrapper > .swiper-slide > .movie__image {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    height: 400px;
+}
+.myMovieSwiper > .swiper-wrapper > .swiper-slide > .movie__image:hover {
+    transform: scale3d(1, 1.1, 1);
+}
+.myMovieSwiper > .swiper-wrapper > .swiper-slide > .movie__content {
+    position: fixed;
+    bottom: -120px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 216px;
+    display: block;
+    color: #fff;
+}
+.myMovieSwiper > .swiper-wrapper > .swiper-slide > .movie__content > .movie__name {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 50px;
+}
+.btn__booking {
+    background-color: #45ab3d;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.btn__booking:hover {
+    color: #45ab3d;
+    background-color: #fff;
+    transition: 0.4s ease all;
+}
+
+.myMovieSwiper > .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0px;
+}
+.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.myMovieSwiper {
+    background-image: url(./images/movie-details-bg.jpg);
+}
+
+/* Movie detail */
+.movie__detail {
+    background-image: url(./images/movie-details-bg.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+/* .product__iamge {
+    background-image: url(./images/HO00002470.jpg);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    position: relative;
+    border-radius: 5px;
+} */
+.product__iamge:hover img {
+    transition: all;
+    display: block;
+    transition: 3s ease-in-out;
+    opacity: 0, 1;
+    background: transparent;
+    /* transform: translate(-20%, 10%); */
+}
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.footer {
+    background-image: url(./images/bg_footer.jpg);
+    width: 100%;
+    background-size: contain;
+    height: 600px;
+}
+
