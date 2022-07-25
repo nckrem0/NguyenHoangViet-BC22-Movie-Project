@@ -5,6 +5,7 @@ import cinema from "slices/cinema";
 import list_theater from "slices/list-theater";
 import list_info_theater from "slices/list-info-theater";
 import info_movie from "slices/info-movie";
+import movie_ticket from "slices/movie-ticket";
 // configureStore : mặc định đã được setup redux-devtool và redux thunk
 const store = configureStore({
     reducer: {
@@ -14,6 +15,7 @@ const store = configureStore({
         list_theater,
         list_info_theater,
         info_movie,
+        movie_ticket,
     },
     //devtools: false // có enable devtool hay không, mặc định là true
     //   devTools: false,

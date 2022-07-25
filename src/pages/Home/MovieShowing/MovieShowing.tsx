@@ -65,7 +65,7 @@ const MovieShowing = () => {
                                 </div>
                                 <div className="movie__description">
                                     {/* <p>{movie.moTa}</p> */}
-                                    <a className="btn__booking pt-2 pb-2" href="#">
+                                    <a className="btn__booking pt-2 pb-2" href="purchase/:movieTicketId">
                                         <i className="pr-2">
                                             <GiTicket />
                                         </i>

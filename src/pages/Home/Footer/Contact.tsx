@@ -1,43 +1,56 @@
+import { AiFillAndroid, AiFillApple, AiFillInstagram, AiFillYoutube } from "react-icons/ai";
+import { SiFacebook, SiZalo } from "react-icons/si";
+
 const Contact = () => {
     return (
-        <div className="bg-black">
-            <div className="px-52 flex">
-                <h1>
-                    TIX
-                    <ul className="flex flex-wrap gap-4">
-                        <li>FAQ</li>
-                        <li>Brand Guidelines</li>
-                        <li>Thỏa thuận sử dụng</li>
-                        <li>Chính sách bảo mật</li>
-                    </ul>
-                </h1>
-                <h1>
-                    ĐỐI TÁC
-                    <ul className="flex flex-wrap gap-4">
-                        <li>FAQ</li>
-                        <li>Brand Guidelines</li>
-                        <li>Thỏa thuận sử dụng</li>
-                        <li>Chính sách bảo mật</li>
-                    </ul>
-                </h1>
-                <h1>
-                    MOBILE APP
-                    <ul className="flex flex-wrap gap-4">
-                        <li>FAQ</li>
-                        <li>Brand Guidelines</li>
-                        <li>Thỏa thuận sử dụng</li>
-                        <li>Chính sách bảo mật</li>
-                    </ul>
-                </h1>
-                <h1>
-                    SOCIAL
-                    <ul className="flex flex-wrap gap-4">
-                        <li>FAQ</li>
-                        <li>Brand Guidelines</li>
-                        <li>Thỏa thuận sử dụng</li>
-                        <li>Chính sách bảo mật</li>
-                    </ul>
-                </h1>
+        <div className="bg-black text-white ">
+            <div className="flex py-10 justify-evenly items-center">
+                <div>
+                    <h6 className="font-medium">TIX</h6>
+                    <div className="grid grid-cols-2 gap-4 pt-4 text-gray-400 text-sm">
+                        <a href="#">FAQ</a>
+                        <a href="#">Brand Guidelines</a>
+                        <a href="#">Thỏa thuận sử dụng</a>
+                        <a href="#">Chính sách bảo mật</a>
+                    </div>
+                </div>
+                <div>
+                    <h6 className="font-medium">PARTNER</h6>
+                    <div className="grid grid-cols-2 gap-4 pt-4 text-gray-400 text-sm">
+                        <a href="#">FAQ</a>
+                        <a href="#">Brand Guidelines</a>
+                        <a href="#">Thỏa thuận sử dụng</a>
+                        <a href="#">Chính sách bảo mật</a>
+                    </div>
+                </div>
+                <div>
+                    <h6 className="font-medium">MOBILE APP</h6>
+                    <div className="grid grid-cols-2 gap-4 pt-4 text-gray-400 text-3xl">
+                        <a href="#">
+                            <AiFillAndroid />
+                        </a>
+                        <a href="#">
+                            <AiFillApple />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h6 className="font-medium">SOCIAL</h6>
+                    <div className="grid grid-cols-4 gap-4 pt-4 text-gray-400 text-3xl">
+                        <a href="#">
+                            <SiFacebook />
+                        </a>
+                        <a href="#">
+                            <AiFillInstagram />
+                        </a>
+                        <a href="#">
+                            <AiFillYoutube />
+                        </a>
+                        <a href="#">
+                            <SiZalo />
+                        </a>
+                    </div>
+                </div>
             </div>
             <hr />
             <div className="flex justify-center items-center text-white leading-7 pb-8 pt-6">
@@ -46,16 +59,21 @@ const Contact = () => {
                     alt="photo"
                     className="w-24 h-auto"
                 />
-                <div className="px-10 leading-10">
+                <div className="px-10 leading-10 ">
                     <h3 className="font-medium">TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</h3>
-                    <div className="text-sm">
+                    <div className="text-sm text-yellow-50">
                         <p>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.</p>
                         <p>Giấy chứng nhận đăng ký kinh doanh số: 0101659783</p>
                         <p>
                             đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế hoạch và đầu tư Thành phố Hồ
                             Chí Minh cấp.
                         </p>
-                        <p>Số Điện Thoại (Hotline): <a className="text-blue-500" href="#">1900 545 436</a></p>
+                        <p>
+                            Số Điện Thoại (Hotline):{" "}
+                            <a className="text-blue-500" href="#">
+                                1900 545 436
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <img

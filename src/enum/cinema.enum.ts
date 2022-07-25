@@ -5,6 +5,7 @@ export enum EnumThunkAction {
     GET_THEATER_LIST = "cinema/getTheaterList",
     GET_LIST_INFO_THEATER = "cinema/getListInfoTheater",
     GET_INFO_MOVIE = "movie/getInfoMovie",
+    GET_MOVIE_TICKET = "movie/getMovieTicket",
 }
 
 export enum Action {
@@ -14,10 +15,15 @@ export enum Action {
     MOVIES = "movies",
     LIST_INFO_THEATER = "list-info-theater",
     INFO_MOVIE = "info-movie",
+    MOVIE_TICKET = "movie-ticket",
 }
 
 export enum Config {
     PER_PAGE_TIME = 6,
     PER_PAGE_MOVIE = 16,
     PER_PAGE_THEATER = 8,
+}
+
+export enum GROUPID {
+    VALUE = "GP09",
 }

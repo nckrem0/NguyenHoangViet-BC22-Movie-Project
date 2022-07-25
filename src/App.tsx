@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "pages/Home/Home";
 import MovieDetail from "pages/MovieDetail";
 import MainTemplate from "template/MainTemplate";
+import MovieTicket from "pages/MovieTicket";
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<MainTemplate />}>
                     <Route path="detail/:movieId" element={<MovieDetail />} />
+                    <Route path="purchase/:movieTicketId" element={<MovieTicket />} />
 
                     <Route index element={<Home />} />
                 </Route>

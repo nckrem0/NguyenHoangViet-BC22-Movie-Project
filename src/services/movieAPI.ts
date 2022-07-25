@@ -5,6 +5,7 @@ import axiosClient from "./axiosClient";
 import { ITheater } from "interfaces/theater";
 import { IInfoTheater } from "interfaces/info-theater";
 import { IInfoMovie } from "interfaces/info-movie";
+import { IMovieTicket } from "interfaces/movie-ticket";
 
 const movieAPI = {
     getMovieList: () => {
@@ -26,6 +27,9 @@ const movieAPI = {
     },
     getInfoMovie: (maPhim: number) => {
         return axiosClient.get<unknown, IInfoMovie>(`QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`);
+    },
+    getMovieTicket: (maLichChieu: number) => {
+        return axiosClient.get<unknown, IMovieTicket>(`QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${maLichChieu}`);
     },
 };
 export default movieAPI;

@@ -134,11 +134,8 @@
 }
 
 /* .product__iamge {
-    background-image: url(./images/HO00002470.jpg);
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    position: relative;
+    width: 700px;
+    height: 100%;
     border-radius: 5px;
 } */
 .product__iamge:hover img {
@@ -174,4 +171,3 @@
     background-size: contain;
     height: 600px;
 }
-

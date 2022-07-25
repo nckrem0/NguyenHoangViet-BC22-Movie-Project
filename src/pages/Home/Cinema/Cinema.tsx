@@ -6,7 +6,8 @@ import { AppDispatch, RootState } from "store";
 import ListTheater from "./ListTheater";
 import { getInfoTheater } from "slices/list-info-theater";
 import moment from "moment";
-import { Config } from "enum/cinema.enum";
+import { Config, GROUPID } from "enum/cinema.enum";
+import { useNavigate } from "react-router-dom";
 const Cinema: React.FC = () => {
     const listCinema = useSelector((state: RootState) => state.cinema);
     const listTheater = useSelector((state: RootState) => state.list_theater);
@@ -14,7 +15,7 @@ const Cinema: React.FC = () => {
 
     //state
     const [maCumRap, setMaCumRap] = useState("");
-
+    const navigation = useNavigate();
     //functions
     const changeMaCumRap = (maCumRap: string): void => {
         setMaCumRap(maCumRap);
@@ -31,7 +32,7 @@ const Cinema: React.FC = () => {
             dispatch(getTheaterList(listCinema.data[0].maHeThongRap));
             const query = {
                 cinema_id: listCinema.data[0].maHeThongRap,
-                maNhom: "GP09",
+                maNhom: GROUPID.VALUE,
             };
             dispatch(getInfoTheater(query));
         }
@@ -58,10 +59,13 @@ const Cinema: React.FC = () => {
         };
         dispatch(getInfoTheater(query));
     };
+    const goToBuyTicket = (maLichChieu: number) => {
+        navigation(`../purchase/${maLichChieu}`);
+    };
     return (
         <div className="text-center my-10 md:container md:mx-auto">
-            <h1>Lịch Chiếu Và Thông Tin Tất Cả Các Rạp</h1>
-            <div className="flex justify-between md:container md:mx-auto">
+            <h1 className="mb-10 text-3xl font-semibold">Lịch Chiếu Và Thông Tin Tất Cả Các Rạp</h1>
+            <div className="flex flex-row justify-between md:container md:mx-auto mb-10 border p-4">
                 {listCinema.data?.map((cinema) => {
                     return (
                         <img
@@ -74,7 +78,7 @@ const Cinema: React.FC = () => {
                     );
                 })}
             </div>
-            <div className="flex justify-start text-left md:container md:mx-auto" style={{maxHeight:"700px"}}>
+            <div className="flex justify-start text-left md:container md:mx-auto boder" style={{ maxHeight: "700px" }}>
                 <div className="w-3/12">
                     {listTheater.data.map((theater, index) => {
                         return (
@@ -104,7 +108,10 @@ const Cinema: React.FC = () => {
                                                     {movive.lstLichChieuTheoPhim.map((lichchieu, index) => {
                                                         return (
                                                             index < Config.PER_PAGE_TIME && (
-                                                                <div className=" border rounded p-2 tracking-widest cursor-pointer">
+                                                                <div
+                                                                    className=" border rounded p-2 tracking-widest cursor-pointer"
+                                                                    onClick={() => goToBuyTicket(lichchieu.maLichChieu)}
+                                                                >
                                                                     <div>
                                                                         <span className="text-green-500 text-base">
                                                                             {moment(lichchieu.ngayChieuGioChieu).format(
