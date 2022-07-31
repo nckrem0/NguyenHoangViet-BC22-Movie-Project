@@ -9,7 +9,7 @@ interface MoviesState {
 }
 const initialState: MoviesState = {
     data: [],
-    isLoading: false,
+    isLoading: true,
     error: "",
 };
 

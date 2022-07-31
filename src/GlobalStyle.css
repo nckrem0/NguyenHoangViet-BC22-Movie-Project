@@ -79,14 +79,24 @@
     height: auto;
     margin-top: 150px;
 }
-.myMovieSwiper > .swiper-wrapper > .swiper-slide > .movie__image {
-    transform: scale(1);
-    transition: 0.3s ease-in-out;
+.movie__image {
+    height: auto;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
     width: 100%;
-    height: 400px;
+    background-color: transparent;
+    cursor: pointer;
 }
-.myMovieSwiper > .swiper-wrapper > .swiper-slide > .movie__image:hover {
-    transform: scale3d(1, 1.1, 1);
+.movie__image img {
+    max-width: 100%;
+    transition: all 1s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.movie__image:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 .myMovieSwiper > .swiper-wrapper > .swiper-slide > .movie__content {
     position: fixed;
@@ -169,5 +179,5 @@
     background-image: url(./images/bg_footer.jpg);
     width: 100%;
     background-size: contain;
-    height: 600px;
+    height: auto;
 }

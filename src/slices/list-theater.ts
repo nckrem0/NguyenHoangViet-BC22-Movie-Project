@@ -11,7 +11,7 @@ interface ListTheaterState {
 
 const initialState: ListTheaterState = {
     data: [],
-    isLoading: false,
+    isLoading: true,
     error: "",
 };
 

@@ -11,7 +11,7 @@ interface ListInfoTheater {
 
 const initialState: ListInfoTheater = {
     data: [],
-    isLoading: false,
+    isLoading: true,
     error: "",
 };
 

@@ -3,7 +3,7 @@ export interface IMovieTicket {
     danhSachGhe: DanhSachGhe[];
 }
 
-interface DanhSachGhe {
+export interface DanhSachGhe {
     maGhe: number;
     tenGhe: string;
     maRap: number;
@@ -12,6 +12,7 @@ interface DanhSachGhe {
     giaVe: number;
     daDat: boolean;
     taiKhoanNguoiDat: string;
+    selected: boolean;
 }
 
 interface ThongTinPhim {

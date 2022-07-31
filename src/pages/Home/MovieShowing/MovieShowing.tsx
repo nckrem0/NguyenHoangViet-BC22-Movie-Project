@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getInfoMovie } from "slices/info-movie";
 import { getMovieList } from "slices/movies";
 import { AppDispatch, RootState } from "store";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,10 +25,10 @@ const MovieShowing = () => {
     }, []);
     if (isLoading) {
         // return <Loading />
-        return <h1>Loading...</h1>;
+        return <></>;
     }
     if (error) {
-        return <h1>{error}</h1>;
+        return <></>;
     }
 
     const goToDetail = (maPhim: number) => {
@@ -38,8 +37,6 @@ const MovieShowing = () => {
 
     return (
         <Swiper
-            slidesPerView={8}
-            spaceBetween={30}
             slidesPerGroup={1}
             autoplay={{
                 delay: 2500,
@@ -47,14 +44,48 @@ const MovieShowing = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="myMovieSwiper w-screen "
+            className="myMovieSwiper w-screen"
+            breakpoints={{
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+                1280: {
+                    slidesPerView: 5,
+                    spaceBetween: 30,
+                },
+                1536: {
+                    slidesPerView: 6,
+                    spaceBetween: 30,
+                },
+                1660: {
+                    slidesPerView: 7,
+                    spaceBetween: 30,
+                },
+                1920: {
+                    slidesPerView: 8,
+                    spaceBetween: 30,
+                },
+            }}
         >
             {data?.map((movie, index) => {
                 return (
                     index < Config.PER_PAGE_MOVIE && (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index} className="movie__image">
                             <img
-                                className="movie__image"
+                                className=""
                                 src={movie.hinhAnh}
                                 alt={movie.tenPhim}
                                 onClick={() => goToDetail(movie.maPhim)}
@@ -65,7 +96,11 @@ const MovieShowing = () => {
                                 </div>
                                 <div className="movie__description">
                                     {/* <p>{movie.moTa}</p> */}
-                                    <a className="btn__booking pt-2 pb-2" href="purchase/:movieTicketId">
+                                    <a
+                                        className="btn__booking pt-2 pb-2"
+                                        href="#"
+                                        onClick={() => goToDetail(movie.maPhim)}
+                                    >
                                         <i className="pr-2">
                                             <GiTicket />
                                         </i>

@@ -11,7 +11,7 @@ interface InfoMovieState {
 
 const initialState: InfoMovieState = {
     data: <IInfoMovie>{},
-    isLoading: false,
+    isLoading: true,
     error: "",
 };
 

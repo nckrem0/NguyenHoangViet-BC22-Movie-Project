@@ -11,7 +11,7 @@ interface CinemaState {
 
 const initialState: CinemaState = {
     data: [],
-    isLoading: false,
+    isLoading: true,
     error: "",
 };
 

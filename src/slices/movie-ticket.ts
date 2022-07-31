@@ -9,8 +9,8 @@ interface ListMovieTicket {
     error: string;
 }
 const initialState: ListMovieTicket = {
-    data: <IMovieTicket>{},
-    isLoading: false,
+    data: {} as IMovieTicket,
+    isLoading: true,
     error: "",
 };
 

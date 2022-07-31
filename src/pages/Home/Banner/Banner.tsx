@@ -18,10 +18,10 @@ const Banner: React.FC = () => {
         dispatch(getMovieBanner());
     }, []);
     if (isLoading) {
-        return <h1>Banner Loading ...</h1>;
+        return <></>;
     }
     if (error) {
-        return <h1>{error}</h1>;
+        return <></>;
     }
     return (
         <Swiper
@@ -39,9 +39,7 @@ const Banner: React.FC = () => {
             {data?.map((banner) => {
                 return (
                     <SwiperSlide key={banner.maPhim}>
-                        <img  src={banner.hinhAnh}
-                        className="2xl:max-w-full"
-                        />
+                        <img src={banner.hinhAnh} className="2xl:max-w-full" />
                     </SwiperSlide>
                 );
             })}

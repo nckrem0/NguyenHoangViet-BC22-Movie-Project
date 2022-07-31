@@ -6,6 +6,7 @@ export enum EnumThunkAction {
     GET_LIST_INFO_THEATER = "cinema/getListInfoTheater",
     GET_INFO_MOVIE = "movie/getInfoMovie",
     GET_MOVIE_TICKET = "movie/getMovieTicket",
+    GET_MOVIE_SHOWTIME_INFO = "movie/movieShowTimeInfo",
 }
 
 export enum Action {
@@ -16,6 +17,7 @@ export enum Action {
     LIST_INFO_THEATER = "list-info-theater",
     INFO_MOVIE = "info-movie",
     MOVIE_TICKET = "movie-ticket",
+    MOVIE_SHOWTIME_INFO = "movie-showtime-info",
 }
 
 export enum Config {

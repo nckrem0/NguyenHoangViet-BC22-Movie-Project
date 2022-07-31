@@ -45,10 +45,10 @@ const Cinema: React.FC = () => {
     }, [listTheater.data]);
 
     if (listCinema.isLoading) {
-        return <h1>Cinema Loading...</h1>;
+        return <></>;
     }
     if (listCinema.error) {
-        return <h1>{listCinema.error}</h1>;
+        return <></>;
     }
 
     const getListTheater = (cinema_id: string): void => {
@@ -63,9 +63,9 @@ const Cinema: React.FC = () => {
         navigation(`../purchase/${maLichChieu}`);
     };
     return (
-        <div className="text-center my-10 md:container md:mx-auto">
+        <div className="text-center my-10 2xl:mx-auto 2xl:max-w-7xl xl:mx-auto xl:max-w-6xl">
             <h1 className="mb-10 text-3xl font-semibold">Lịch Chiếu Và Thông Tin Tất Cả Các Rạp</h1>
-            <div className="flex flex-row justify-between md:container md:mx-auto mb-10 border p-4">
+            <div className="flex flex-row justify-between mb-10 border p-4 2xl:mx-auto 2xl:max-w-7xl xl:mx-auto xl:max-w-6xl lg:mx-auto lg:max-w-5xl md:max-w-4xl md:mx-auto sm:max-w-xl sm:mx-auto">
                 {listCinema.data?.map((cinema) => {
                     return (
                         <img
@@ -78,8 +78,11 @@ const Cinema: React.FC = () => {
                     );
                 })}
             </div>
-            <div className="flex justify-start text-left md:container md:mx-auto boder" style={{ maxHeight: "700px" }}>
-                <div className="w-3/12">
+            <div
+                className="flex justify-start text-left 2xl:mx-auto 2xl:max-w-7xl xl:mx-auto xl:max-w-6xl lg:mx-auto lg:max-w-5xl md:max-w-4xl md:mx-auto sm:max-w-xl sm:mx-auto boder relative"
+                style={{ maxHeight: "800px" }}
+            >
+                <div className="w-4/12">
                     {listTheater.data.map((theater, index) => {
                         return (
                             index < Config.PER_PAGE_THEATER && (
@@ -88,7 +91,7 @@ const Cinema: React.FC = () => {
                         );
                     })}
                 </div>
-                <div className="w-3/5 overflow-y-auto scroll-smooth">
+                <div className="w-4/5 overflow-y-auto scroll-smooth">
                     {listInfoTheater.data.map((info, index) => {
                         return info.lstCumRap.map((cumrap, index) => {
                             return (
@@ -101,25 +104,28 @@ const Cinema: React.FC = () => {
                                             </div>
                                             <div className="pl-6">
                                                 <div className="flex gap-2">
-                                                    <span className="bg-red-500 w-9 text-center rounded-md">C18</span>
-                                                    <h1 className="font-bold text-lg">{movive.tenPhim}</h1>
+                                                    <span className="bg-red-500 w-9 text-center rounded-md ">C18</span>
+                                                    <h1 className="font-bold 2xl:text-lg xl:text-base lg:text-base md:text-sm sm:text-xs">
+                                                        {movive.tenPhim}
+                                                    </h1>
                                                 </div>
-                                                <div className=" pt-5 flex flex-wrap gap-4">
+                                                <div className=" pt-5 flex flex-wrap gap-4 ">
                                                     {movive.lstLichChieuTheoPhim.map((lichchieu, index) => {
                                                         return (
                                                             index < Config.PER_PAGE_TIME && (
                                                                 <div
                                                                     className=" border rounded p-2 tracking-widest cursor-pointer"
                                                                     onClick={() => goToBuyTicket(lichchieu.maLichChieu)}
+                                                                    key={lichchieu.maLichChieu}
                                                                 >
                                                                     <div>
-                                                                        <span className="text-green-500 text-base">
+                                                                        <span className="text-green-500 text-base 2xl:text-base xl:text-base lg:text-base md:text-sm sm:text-xs">
                                                                             {moment(lichchieu.ngayChieuGioChieu).format(
                                                                                 "DD/MM/YYYY"
                                                                             )}
                                                                         </span>
                                                                         &nbsp;~&nbsp;
-                                                                        <span className="text-red-500 font-semibold ">
+                                                                        <span className="text-red-500 font-semibold 2xl:text-base xl:text-base lg:text-base md:text-sm sm:text-xs">
                                                                             {moment(lichchieu.ngayChieuGioChieu).format(
                                                                                 "hh:mm"
                                                                             )}

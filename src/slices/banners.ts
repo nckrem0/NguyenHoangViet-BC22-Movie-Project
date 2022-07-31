@@ -10,12 +10,10 @@ interface BannerState {
 }
 const initialState: BannerState = {
     data: [],
-    isLoading: false,
+    isLoading: true,
     error: "",
 };
-export const getMovieBanner = createAsyncThunk(
-    EnumThunkAction.GET_MOVIE_BANNER, 
-    async () => {
+export const getMovieBanner = createAsyncThunk(EnumThunkAction.GET_MOVIE_BANNER, async () => {
     try {
         const data = await movieAPI.getMovieBanner();
         return data;
