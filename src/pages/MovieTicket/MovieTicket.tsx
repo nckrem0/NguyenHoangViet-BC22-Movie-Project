@@ -111,43 +111,6 @@ const MovieTicket = () => {
                 <div className="">
                     <div className="flex gap-2 flex-wrap justify-center items-center">
                         {danhSachGhe.map((list) => {
-                            // if (list.loaiGhe === "Vip") {
-                            //     if (list.daDat === true) {
-                            //         return (
-                            //             <div>
-                            //                 <button
-                            //                     className=" bg-gray-600  w-10 h-10 rounded-md text-center m-auto
-                            //                 "
-                            //                 >
-                            //                     X
-                            //                 </button>
-                            //             </div>
-                            //         );
-                            //     }
-                            //     return (
-                            //         <div>
-                            //             <button className="bg-yellow-400  w-10 h-10 rounded-md " disabled={list.daDat}>
-                            //                 {list.stt}
-                            //             </button>
-                            //         </div>
-                            //     );
-                            // } else {
-                            //     if (list.daDat === true) {
-                            //         return (
-                            //             <div>
-                            //                 <button className=" bg-gray-600  w-10 h-10 rounded-md text-center m-auto ">
-                            //                     X
-                            //                 </button>
-                            //             </div>
-                            //         );
-                            //     } else {
-                            //         return (
-                            //             <div>
-                            //                 <button className="bg-gray-300  w-10 h-10 rounded-md ">{list.stt}</button>
-                            //             </div>
-                            //         );
-                            //     }
-                            // }
                             return (
                                 <div>
                                     <button
@@ -182,37 +145,6 @@ const MovieTicket = () => {
                                     </button>
                                 </div>
                             );
-
-                            // return (
-                            //     <div key={list.maGhe}>
-                            //         {!list.daDat && (
-                            //             <button
-                            //                 className={`${
-                            //                     list.loaiGhe === "Vip"
-                            //                         ? listDanhSachVe.some((selected) => selected.maGhe === list.maGhe)
-                            //                             ? "bg-green-400"
-                            //                             : "bg-yellow-400"
-                            //                         : listDanhSachVe.some((selected) => selected.maGhe === list.maGhe)
-                            //                         ? "bg-green-400"
-                            //                         : "bg-gray-300"
-                            //                 }   w-10 h-10 rounded-md`}
-                            //                 onClick={() => handleSelect(list)}
-                            //             >
-                            //                 {list.stt}
-                            //             </button>
-                            //         )}
-                            //         {list.daDat && (
-                            //             <div>
-                            //                 <button
-                            //                     className=" bg-gray-600  w-10 h-10 rounded-md text-center m-auto
-                            //                          "
-                            //                 >
-                            //                     X
-                            //                 </button>
-                            //             </div>
-                            //         )}
-                            //     </div>
-                            // );
                         })}
                     </div>
                 </div>

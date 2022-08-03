@@ -55,7 +55,7 @@ const Cinema: React.FC = () => {
         dispatch(getTheaterList(cinema_id));
         const query = {
             cinema_id: cinema_id,
-            maNhom: "GP09",
+            maNhom: GROUPID.VALUE,
         };
         dispatch(getInfoTheater(query));
     };

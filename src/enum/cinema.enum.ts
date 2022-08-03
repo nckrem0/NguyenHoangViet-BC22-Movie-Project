@@ -27,5 +27,5 @@ export enum Config {
 }
 
 export enum GROUPID {
-    VALUE = "GP09",
+    VALUE = "GP03",
 }
